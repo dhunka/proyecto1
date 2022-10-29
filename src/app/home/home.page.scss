@@ -25,3 +25,75 @@
 #container a {
   text-decoration: none;
 }
+
+
+
+
+
+.login-section{
+  height: 74vh;
+  width: 100%;
+  max-width: 500px;
+  right:0;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  margin: auto;
+  border-top-left-radius: 46px;
+  border-top-right-radius: 46px;
+
+  p{
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #7b7b7b;
+    text-align: center;
+  }
+  
+
+  .login-form{
+    .form-input{
+      position: relative;
+      margin-bottom: 10px;
+      ion-item::part(native){
+        padding-left: 0;
+      }
+      
+      ion-icon{
+        position: absolute;
+        top: 16px;
+        z-index: 2;
+        font-size: 1.2rem;
+        left: 8px;
+      }
+      ion-label{
+        position: absolute;
+        margin-left: 35px;
+        font-weight: bolder;
+        font-size: 15px;
+        top: 3px;
+      }
+      ion-input{
+        font-size: 0.9rem;
+        --padding-start: 36px;
+        --padding-top: 36px;
+        
+      }
+    }
+    
+  }
+  .action-button{
+    text-align: center;
+    .btn-login{
+      --background:#f9b801 ;
+      width: 100%;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    a{
+      margin-top: 15px;
+      font-size: 1rem;
+      color: #7b7b7b;
+      text-align: center;
+    }
+  }
+}

@@ -15,21 +15,10 @@ const routes: Routes = [
     path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
-  {
-    path: 'registrarse',
-    loadChildren: () => import('./registrarse/registrarse.module').then( m => m.RegistrarsePageModule)
-  },
+  
   {
     path: 'recuperar',
     loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
-  },
-  {
-    path: 'iniciosesion',
-    loadChildren: () => import('./iniciosesion/iniciosesion.module').then( m => m.IniciosesionPageModule)
-  },
-  {
-    path: 'qr',
-    loadChildren: () => import('./qr/qr.module').then( m => m.QrPageModule)
   },
   {
     path: 'login',
@@ -48,12 +37,12 @@ const routes: Routes = [
     loadChildren: () => import('./docentelist/docentelist.module').then( m => m.DocentelistPageModule)
   },
   {
-    path: 'loginalumno',
-    loadChildren: () => import('./loginalumno/loginalumno.module').then( m => m.LoginalumnoPageModule)
-  },
-  {
     path: 'login2',
     loadChildren: () => import('./login2/login2.module').then( m => m.Login2PageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
   },
 ];
 
