@@ -3,7 +3,11 @@
     <ion-title>
       ResgistrAPP
     </ion-title>
-    <a slot="end" href="home">Home</a>
+    
+    <div class="action-button ion-padding">
+      <ion-button size="small" class="btn-login"  shape="round" [routerLink]="['/home']">Home</ion-button>
+      
+    </div>
   </ion-toolbar>
 </ion-header>
 
@@ -13,16 +17,25 @@
       <ion-title size="large">RegistrAPP</ion-title>
     </ion-toolbar>
   </ion-header>
-
+  <br>
+  <div>
+    <ion-item class="form-input">
+      <ion-icon name="shield"></ion-icon>
+      <ion-label class="ion-text-wrap">
+        Ingrese su correo para enviar la solicitud de cambio de contraseÃ±a.
+      </ion-label>
+    </ion-item>
+  </div>
   <div id="container">
     <br>
+    <ion-icon name="person-outline"></ion-icon>
     <ion-item>
-      <ion-label>Correo</ion-label>
-      <ion-input></ion-input>
+      <ion-label position="floating"> Email</ion-label>
+      <ion-input type="email"></ion-input>
     </ion-item>
-  
-    <ion-button color="primary" expand="block">Mandar solicitud</ion-button>
-   
+    <br>
+
+    <ion-button color="primary" expand="block" shape="round" (click)="presentAlert()">Mandar Solicitud</ion-button>
 
     
   </div>

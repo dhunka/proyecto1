@@ -3,7 +3,7 @@
     <ion-title>
       ResgistrAPP
     </ion-title>
-    <a slot="end" href="home">Home</a>
+  
   </ion-toolbar>
 </ion-header>
 
@@ -14,20 +14,15 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <br>
-    <ion-item>
-      <ion-label>Usuario</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Contraseña</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-   
-    <ion-button color="primary" expand="block">Iniciar</ion-button>
-    <p><a href="recuperar" slot="">Recuperar contraseña</a></p>
-
-    
-  </div>
+  <ion-card *ngIf="entradaActual">
+    <ion-card-content>
+      <p id="fechaTexto">{{entradaActual.fechaTexto}}</p>
+      <ion-textarea rows="15" [(ngModel)] = "entradaActual.texto">
+        
+      </ion-textarea>
+    </ion-card-content>
+    <ion-button expand="block" (click)="guardar(entradaActual)">
+      Guardar
+    </ion-button>
+  </ion-card>
 </ion-content>

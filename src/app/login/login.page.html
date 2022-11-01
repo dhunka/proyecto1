@@ -1,37 +1,51 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Login</ion-title>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      ResgistrAPP
+    </ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true"> <!-- IOS -->
   <ion-card>
-    <ion-card-header>
-      <ion-card-title>Login</ion-card-title>
-    </ion-card-header>
+    <ion-card>
+      <img src="assets/icon/logoduoc.png" />
+    </ion-card>
+    
     <ion-card-content>
-      <form [formGroup]="formularioLogin">
-        <ion-item>
-          <ion-label position="floating">Nombre</ion-label>
-          <ion-input formControlName="nombre"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Contraseña</ion-label>
-          <ion-input formControlName="password" type="password"></ion-input>
-        </ion-item>
-      </form>
-      <br>
-      <ion-button (click)="ingresar()">
-        Ingresar
-      </ion-button>
+      <div class="login-section ion-padding">
+        <div class="login-form ion-padding">
+          <form [formGroup]="formularioLogin">
+            <div class="form-input">
+              <ion-icon name="person-outline"></ion-icon>
+              <ion-item>
+                <ion-label position="floating">Nombre</ion-label>
+                <ion-input formControlName="nombre"></ion-input>
+              </ion-item>
+            </div>
+            <div>
+              <ion-icon name="finger-print-outline"></ion-icon>
+              <ion-item>
+                <ion-label position="floating">Contraseña</ion-label>
+                <ion-input formControlName="password" type="password"></ion-input>
+              </ion-item>
+              <p [routerLink]="['/recuperar']">Olvidaste tu contraseña?</p>
+            </div>
+          </form>
+          <br>
+          <div class="action-button ion-padding">
+            <ion-button size="large" class="btn-login" (click)="ingresar()">
+              Ingresar
+            </ion-button>
+            <p [routerLink]="['/registro']">No tienes una cuenta ?</p>
+          </div>
+         </div>
+      </div>
+      
     </ion-card-content>
   </ion-card>
+  
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="end">
-      <ion-button [routerLink]="['/registro']">Registrarse</ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-footer>
+
